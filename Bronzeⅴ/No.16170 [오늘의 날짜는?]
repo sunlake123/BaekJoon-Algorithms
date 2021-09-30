@@ -1,0 +1,9 @@
+public class Main {
+	
+	public static void main(String[] args) throws Exception {
+
+		System.out.println("2021");
+		System.out.println("09");
+		System.out.println("30");
+	}	
+}
