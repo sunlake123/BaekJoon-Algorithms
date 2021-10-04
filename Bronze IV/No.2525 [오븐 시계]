@@ -1,0 +1,23 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main {
+	
+	public static void main(String[] args) throws Exception {
+
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(bf.readLine());
+		int A = Integer.parseInt(st.nextToken());
+		int B = Integer.parseInt(st.nextToken());
+		st = new StringTokenizer(bf.readLine());
+		int C = Integer.parseInt(st.nextToken());
+		
+		A += (B+C)/60;
+		int D = (B+C) % 60;
+		
+		if (A >= 24)
+			A -= 24; //if를 안 쓰고 A%24로 처리하는 방법도 있음...이게 더 좋은듯?
+		System.out.println(A+" "+D);
+	}	
+}
