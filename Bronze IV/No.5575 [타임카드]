@@ -1,0 +1,33 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main {
+	static void getTime(int[] a) {
+		int x = (a[3]-a[0])*3600+(a[4]-a[1])*60+(a[5]-a[2]);
+		System.out.println(x/3600+" "+(x%3600)/60+" "+x%60);
+	}
+	
+	public static void main(String[] args) throws Exception {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int[] a = new int[6];
+		for (int i = 0 ; i < 6 ; i++)
+			a[i] = Integer.parseInt(st.nextToken());
+		st = new StringTokenizer(br.readLine());
+		int[] b = new int[6];
+		for (int i = 0 ; i < 6 ; i++)
+			b[i] = Integer.parseInt(st.nextToken());
+		st = new StringTokenizer(br.readLine());
+		int[] c = new int[6];
+		for (int i = 0 ; i < 6 ; i++)
+			c[i] = Integer.parseInt(st.nextToken());
+
+		getTime(a);
+		getTime(b);
+		getTime(c);
+		
+		
+	}	
+}
